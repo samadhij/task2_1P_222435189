@@ -88,20 +88,16 @@ public class SeleniumOperations {
 		// Send password confirmation
 		pwordConf.sendKeys("samadhi");
 		
+		 //Identify button 'Create account' and click to submit using Selenium API.
 		
-		/*
-		 * Identify button 'Create account' and click to submit using Selenium API.
-		 */
 		WebElement createAccountButton = driver.findElement(By.cssSelector("button[data-testid='account-action-btn']"));
         createAccountButton.click();
 		
-		/*
-		 * Take screenshot using selenium API.
-		 */
+		//Take screenshot using selenium API.
+		
         if (driver.getCurrentUrl().equals(url)) {
         	saveScreenshotOfficeworks(driver);
         }
-		
 		
 		// Sleep a while
 		sleep(2);
